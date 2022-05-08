@@ -1,0 +1,71 @@
+:root {
+  --radius: 8px;
+  --border-color: #e1e1e1;
+  --box-shadow-color: #b2b2b2;
+  --text-color: #000;
+  --result-box: rgb(255, 255, 238);
+}
+
+p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.container {
+  max-width: 1024px;
+}
+
+.exercise__container .btn-show-wrapper {
+  border: 1px solid #e1e1e1;
+  border-radius: var(--radius);
+}
+.exercise__container .btn-show-wrapper .show-ex {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: var(--radius);
+  background-color: #dedede;
+  margin: 24px 0;
+  color: var(--text-color);
+  transition: all 0.1s ease;
+}
+.exercise__container .btn-show-wrapper .show-ex:hover {
+  box-shadow: 4px 8px var(--box-shadow-color);
+  transform: translate(-4px, -8px);
+}
+
+.exercise__container .input-container input,
+.exercise__container .input-container select {
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+}
+.exercise__container .btn-form button {
+  min-width: 160px;
+  padding: 8px 16px;
+  border-radius: var(--radius);
+}
+
+.exercise__container .results-box {
+  padding: 16px 16px;
+  width: 100%;
+  background-color: rgb(252, 252, 240);
+  height: 56px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+}
+
+.hidden {
+  display: none;
+}
+
+.exercise-wrapper {
+  display: none;
+}
+
+.active {
+  display: block;
+}

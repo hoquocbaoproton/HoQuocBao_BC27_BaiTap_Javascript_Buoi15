@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>js_ex-15</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./src/css/style.css" />
+  </head>
+  <body>
+    <section id="exercise" class="exercise">
+      <div class="container">
+        <div class="exercise__container mt-5">
+          <div class="row">
+            <div class="col-2 btn-show-wrapper">
+              <button class="show-ex">exercise 1</button>
+              <button class="show-ex">exercise 2</button>
+              <button class="show-ex">exercise 3</button>
+              <button class="show-ex">exercise 4</button>
+            </div>
+            <div class="col-10">
+              <div class="first-display">
+                <h1 class="text-center">Chọn bài tập để hiện thị</h1>
+              </div>
+
+              <div id="ex-1" class="exercise-wrapper">
+                <div class="form-group">
+                  <label for="">
+                    <h1>🏫 Quản lý tuyển sinh</h1>
+                  </label>
+                  <div class="row mt-5 input-container">
+                    <div class="col-4 mb-4">
+                      <input
+                        type="number"
+                        class="form-control"
+                        name=""
+                        id="standard__ex-1"
+                        placeholder="Điểm chuẩn"
+                      />
+                    </div>
+                    <div class="col-4 mb-4">
+                      <select
+                        class="d-block w-100 form-select"
+                        name=""
+                        id="location__ex-1"
+                      >
+                        <option value="">chọn khu vực</option>
+                        <option value="a">A</option>
+                        <option value="b">B</option>
+                        <option value="c">C</option>
+                      </select>
+                    </div>
+                    <div class="col-4 mb-4">
+                      <select
+                        class="d-block w-100 form-select"
+                        name=""
+                        id="object__ex-1"
+                      >
+                        <option value="">chọn đối tượng</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                    </div>
+                    <div class="col-4 mb-4">
+                      <input
+                        type="number"
+                        class="form-control"
+                        name=""
+                        id="subject1__ex-1"
+                        placeholder="Môn thứ 1"
+                      />
+                    </div>
+                    <div class="col-4 mb-4">
+                      <input
+                        type="number"
+                        class="form-control"
+                        name=""
+                        id="subject2__ex-1"
+                        placeholder="Môn thứ 2"
+                      />
+                    </div>
+                    <div class="col-4 mb-4">
+                      <input
+                        type="number"
+                        class="form-control"
+                        name=""
+                        id="subject3__ex-1"
+                        placeholder="Môn thứ 3"
+                      />
+                    </div>
+                  </div>
+                  <div class="btn-form" id="btn__results-ex-1">
+                    <button
+                      onclick="showResult()"
+                      type="button"
+                      class="btn btn-primary"
+                    >
+                      Kết Quả
+                    </button>
+                  </div>
+                  <div class="results-box mt-4">
+                    <p id="result-ex-1"></p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="ex-2" class="exercise-wrapper">
+                <div class="form-group">
+                  <label for="">
+                    <h1>🔋 Tính tiền điện</h1>
+                  </label>
+                  <div class="row mt-5 input-container">
+                    <div class="col-6 mb-4">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name=""
+                        id="name_ex2"
+                        placeholder="Tên"
+                      />
+                    </div>
+                    <div class="col-6 mb-4">
+                      <input
+                        type="number"
+                        class="form-control"
+                        name=""
+                        id="kw_ex2"
+                        placeholder="nhập số kw"
+                      />
+                    </div>
+                  </div>
+                  <div class="btn-form" id="btn__results-ex-2">
+                    <button
+                      onclick="showResultEx2()"
+                      type="button"
+                      class="btn btn-primary"
+                    >
+                      In hóa đơn
+                    </button>
+                  </div>
+                  <div class="results-box mt-4">
+                    <p id="result-ex-2"></p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="ex-3" class="exercise-wrapper">
+                <div class="form-group">
+                  <label for="">
+                    <h1>💰 Tính thuế thu nhập cá nhân</h1>
+                  </label>
+                  <div class="row mt-5 input-container">
+                    <div class="col-4 mb-4">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name=""
+                        id="name_ex3"
+                        placeholder="Tên"
+                      />
+                    </div>
+                    <div class="col-4 mb-4">
+                      <input
+                        type="number"
+                        class="form-control"
+                        name=""
+                        id="money_ex3"
+                        placeholder="Thu nhập hằng năm"
+                      />
+                    </div>
+                    <div class="col-4 mb-4">
+                      <input
+                        type="number"
+                        class="form-control"
+                        name=""
+                        id="person_ex3"
+                        placeholder="Số người phụ thuộc"
+                      />
+                    </div>
+                  </div>
+                  <div class="btn-form" id="btn__results-ex-3">
+                    <button
+                      onclick="showResultEx3()"
+                      type="button"
+                      class="btn btn-primary"
+                    >
+                      Tính thuế
+                    </button>
+                  </div>
+                  <div class="results-box mt-4">
+                    <p id="result-ex-3"></p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="ex-4" class="exercise-wrapper">
+                <div class="form-group">
+                  <label for="">
+                    <h1>🕸️ Tính tiền cáp</h1>
+                  </label>
+                  <div class="row mt-5 input-container">
+                    <div class="col-4 mb-4">
+                      <select
+                        class="form-control w-100"
+                        name=""
+                        id="customer_ex4"
+                      >
+                        <option value="">Chọn loại khách khàng</option>
+                        <option value="civil">Nhà dân</option>
+                        <option value="corp">Doanh nghiệp</option>
+                      </select>
+                    </div>
+                    <div class="col-4 mb-4">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name=""
+                        id="customerId_ex4"
+                        placeholder="Nhập mã khách hàng"
+                      />
+                    </div>
+                    <div class="col-4 mb-4">
+                      <input
+                        type="number"
+                        class="form-control"
+                        name=""
+                        id="premiumChannels_ex4"
+                        placeholder="Số kênh cao cấp"
+                      />
+                    </div>
+                    <div class="col-4 mb-4">
+                      <input
+                        type="number"
+                        class="form-control hidden"
+                        name=""
+                        id="connectNumbers_ex4"
+                        placeholder="số kết nối"
+                      />
+                    </div>
+                  </div>
+                  <div class="btn-form">
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      id="btn__results-ex-4"
+                    >
+                      Tính tiền cáp
+                    </button>
+                  </div>
+                  <div class="results-box mt-4">
+                    <p id="result-ex-4"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- display -->
+    <script src="./src/script/display.js"></script>
+    <!-- ex -->
+    <script src="./src/script/ex-1.js"></script>
+    <script src="./src/script/ex-2.js"></script>
+    <script src="./src/script/ex-3.js"></script>
+    <script src="./src/script/ex-4.js"></script>
+  </body>
+</html>
